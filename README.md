@@ -1,2 +1,2 @@
 # TryActions
-Experimental GitHub Repo to try out Actions
+Experimental GitHub Repo to try out Actions.
