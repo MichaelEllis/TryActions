@@ -1,1 +1,2 @@
 This is the wibble file. Line 1.
+Added another line.
