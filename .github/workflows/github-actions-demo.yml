@@ -4,6 +4,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
+      - name: Create secret environment variable
         env:
             SUPER_SECRET: ${{ secrets.MY_SECRET }}
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
