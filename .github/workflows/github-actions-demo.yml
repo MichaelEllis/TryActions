@@ -17,6 +17,7 @@ jobs:
       - name: Secret Stuff
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+        run: |
+          echo "hello"   
 
       - run: echo "🍏 This job's status is ${{ job.status }}."
