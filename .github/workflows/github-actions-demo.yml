@@ -23,6 +23,6 @@ jobs:
         run: |
           echo "secret is " "$env:SUPER_SECRET" ${{ secrets.MY_SECRET }}
           echo "GITHUB_TOKEN " "$env:GITHUB_TOKEN"
-          echo "NEW_VAR " "$env:NEW_VAR"
+          echo "NEW_VAR " "$NEW_VAR"
 
       - run: echo "🍏 This job's status is ${{ job.status }}."
