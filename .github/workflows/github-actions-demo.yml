@@ -15,6 +15,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - name: Secret Stuff
+     - shell: bash
           env:
              SUPER_SECRET: ${{ secrets.MY_SECRET }}
           run: |
