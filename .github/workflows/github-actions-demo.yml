@@ -18,5 +18,5 @@ jobs:
       - name: Let Me Tell You A Secret
         env:
             SUPER_SECRET: ${{ secrets.MY_SECRET }}
-            run: echo "Hello"
+      - run: echo "$env:SUPER_SECRET"
       - run: echo "🍏 This job's status is ${{ job.status }}."
