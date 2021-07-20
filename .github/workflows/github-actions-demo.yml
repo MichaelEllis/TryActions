@@ -18,9 +18,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SUPER_SECRET: ${{ secrets.MY_SECRET }}
+          NEW_VAR: "51773"
 
         run: |
-          echo "secret is " "$env:SUPER_SECRET" ${{ secrets.GITHUB_TOKEN }}
+          echo "secret is " "$env:SUPER_SECRET" ${{ secrets.MY_SECRET }}
           echo "GITHUB_TOKEN " "$env:GITHUB_TOKEN"
+          echo "NEW_VAR " "$env:NEW_VAR"
 
       - run: echo "🍏 This job's status is ${{ job.status }}."
