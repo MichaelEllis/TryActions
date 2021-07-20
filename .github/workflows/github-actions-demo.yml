@@ -18,10 +18,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SUPER_SECRET: ${{ secrets.MY_SECRET }}
+          SUPER_SECRET2: ${{ secrets.MY_SECRET2 }}
           NEW_VAR: "51773"
 
         run: |
           echo "secret is $SUPER_SECRET"
+          echo "secret2 is $SUPER_SECRET2"
           echo "GITHUB_TOKEN is $GITHUB_TOKEN"
           echo "NEW_VAR is $NEW_VAR"
           echo "USER is $USER"
