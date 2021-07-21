@@ -20,7 +20,7 @@ jobs:
           
       - name: Secret Stuff
         env:
-          GITHUB_REPO: ${{ secrets.github.repository }}
+          GITHUB_REPO: ${{ github.repository }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SUPER_SECRET: ${{ secrets.MY_SECRET }}
           SUPER_SECRET2: ${{ secrets.MY_SECRET2 }}
