@@ -28,4 +28,8 @@ jobs:
           echo "NEW_VAR is $NEW_VAR"
           echo "USER is $USER"
 
+      - name: My Test Step
+        if: ${{ github.event_name == 'pull_request' }}
+        run: echo "oooh"
+   
       - run: echo "🍏 This job's status is ${{ job.status }}."
