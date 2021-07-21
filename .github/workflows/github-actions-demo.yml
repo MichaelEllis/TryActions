@@ -31,5 +31,9 @@ jobs:
       - name: My Test Step
         if: ${{ github.event_name == 'pull_request' }}
         run: echo "oooh"
+        
+      - name: My Second Step
+        if: ${{ github.event_name != 'pull_request' }}
+        run: echo "ahhh"
    
       - run: echo "🍏 This job's status is ${{ job.status }}."
