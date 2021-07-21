@@ -20,26 +20,22 @@ jobs:
           
       - name: Secret Stuff
         env:
+          GITHUB_EVENT: ${{ github.event_name }}
           GITHUB_REPO: ${{ github.repository }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SUPER_SECRET: ${{ secrets.MY_SECRET }}
-          SUPER_SECRET2: ${{ secrets.MY_SECRET2 }}
+          MY_SECRET: ${{ secrets.MY_SECRET }}
+          MY_SECRET2: ${{ secrets.MY_SECRET2 }}
           NEW_VAR: "51773"
 
         run: |
+          echo "GITHUB_EVENT is $GITHUB_EVENT"
           echo "GITHUB_REPO is $GITHUB_REPO"
-          echo "secret is $SUPER_SECRET"
-          echo "secret2 is $SUPER_SECRET2"
           echo "GITHUB_TOKEN is $GITHUB_TOKEN"
+          echo "MY_SECRET is $MY_SECRET"
+          echo "MY_SECRET2 is $MY_SECRET2"
           echo "NEW_VAR is $NEW_VAR"
           echo "USER is $USER"
+          echo "PATH is $PATH"
 
-      - name: My Test Step
-        if: ${{ github.event_name == 'pull_request' }}
-        run: echo "oooh ${{ github.event_name }}"
-        
-      - name: My Second Step
-        if: ${{ github.event_name != 'pull_request' }}
-        run: echo "ahhh ${{ github.event_name }}"
    
       - run: echo "🍏 This job's status is ${{ job.status }}."
